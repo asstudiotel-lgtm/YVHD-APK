@@ -1,9 +1,9 @@
 name: Build Cordova Android APK
 
 on:
-  workflow_dispatch: # Actions sekmesinden tek tuşla manuel başlatmak için
+  workflow_dispatch:
   push:
-    branches: [ "main" ] # main dalına her push yaptığınızda otomatik derler
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -16,8 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '22'
 
       - name: Setup Java (JDK 17)
         uses: actions/setup-java@v4
